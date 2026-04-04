@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#93000a",
+                    "tertiary-fixed-dim": "#c1c7cf",
+                    "on-surface": "#e5e2e1",
+                    "on-secondary": "#490080",
+                    "outline-variant": "#464554",
+                    "on-primary-fixed-variant": "#2f2ebe",
+                    "on-error": "#690005",
+                    "secondary": "#ddb7ff",
+                    "secondary-container": "#6f00be",
+                    "on-primary-fixed": "#07006c",
+                    "inverse-primary": "#494bd6",
+                    "tertiary-fixed": "#dde3eb",
+                    "on-secondary-fixed": "#2c0051",
+                    "outline": "#908fa0",
+                    "on-tertiary-container": "#242a30",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface": "#131313",
+                    "on-tertiary-fixed-variant": "#41474e",
+                    "inverse-on-surface": "#313030",
+                    "on-secondary-container": "#d6a9ff",
+                    "on-primary-container": "#0d0096",
+                    "background": "#131313",
+                    "on-tertiary": "#2b3137",
+                    "surface-bright": "#3a3939",
+                    "secondary-fixed": "#f0dbff",
+                    "on-primary": "#1000a9",
+                    "surface-dim": "#131313",
+                    "tertiary": "#c1c7cf",
+                    "surface-variant": "#353534",
+                    "tertiary-container": "#8b9199",
+                    "error": "#ffb4ab",
+                    "primary-fixed": "#e1e0ff",
+                    "secondary-fixed-dim": "#ddb7ff",
+                    "surface-container-highest": "#353534",
+                    "primary": "#c0c1ff",
+                    "surface-container": "#201f1f",
+                    "primary-container": "#8083ff",
+                    "on-surface-variant": "#c7c4d7",
+                    "primary-fixed-dim": "#c0c1ff",
+                    "surface-container-high": "#2a2a2a",
+                    "on-background": "#e5e2e1",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-tint": "#c0c1ff",
+                    "on-tertiary-fixed": "#161c22",
+                    "surface-container-low": "#1c1b1b",
+                    "on-secondary-fixed-variant": "#6900b3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(28, 27, 27, 0.4);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(192, 193, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .light-leak-top {
+            box-shadow: inset 0 1px 0 0 rgba(192, 193, 255, 0.15);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-obsidian-glow {
+            background: radial-gradient(circle at top right, rgba(111, 0, 190, 0.15), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(128, 131, 255, 0.1), transparent 40%),
+                        #0E0E0E;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-obsidian-glow text-on-surface font-body min-h-screen selection:bg-primary-container selection:text-white">
+<!-- Top Navigation Suppression: Linear Journey (Registration) hides Main Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer">arrow_back_ios</span>
+</div>
+<div class="font-headline font-black text-2xl tracking-[-0.05em] text-white">RONI</div>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</header>
+<main class="flex flex-col items-center justify-center min-h-screen px-6 pt-20 pb-12">
+<!-- Hero Branding Area -->
+<div class="w-full max-w-sm mb-10 text-left">
+<h1 class="font-headline text-4xl font-extrabold tracking-tighter text-white mb-2">Join the Flow.</h1>
+<p class="text-on-surface-variant text-sm font-medium tracking-wide">Enter the refractive monolith of productivity.</p>
+</div>
+<!-- Registration Card -->
+<div class="w-full max-w-sm glass-card light-leak-top rounded-[32px] p-8 relative overflow-hidden">
+<!-- Glass Overlay Grain/Texture simulation -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMgMjKHRwbPE_oYgIXnBTxNI8DTLitHmG8PJbCbdV3AXqiEpb9TqPW_gg7PFR5MosqRGsDHr-DpwFPyoUxnYGBP6zUvME-MnJO4cED7kEJs17_hmkUoU9CACsZFUGI2IWluLwkzlRNQ3cChvyqSBtNldTZD5ZTS07A4kBWSO9VAOtX_g45maTXVEKjJUg4R2OFZMH2yNeo8IBiKRzsWc04q3RWUkZKgI3oBbsCB4b1pj8Cin6Hcp2KwkJVkTL1eYnVAknzdVJ2IB6R');"></div>
+<div class="relative z-10 space-y-6">
+<!-- Input Group: Name -->
+<div class="space-y-1.5">
+<label class="font-label text-[10px] uppercase tracking-[0.1em] text-on-tertiary-fixed-variant font-bold px-1">Full Name</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-highest/30 border-none rounded-xl px-4 py-4 text-white placeholder:text-on-surface-variant/40 focus:ring-1 focus:ring-secondary-container transition-all outline-none" placeholder="Alex Rivers" type="text"/>
+<div class="absolute bottom-0 left-4 right-4 h-[1px] bg-outline-variant/20 group-focus-within:bg-secondary-container shadow-[0_0_8px_rgba(111,0,190,0.4)] transition-all"></div>
+</div>
+</div>
+<!-- Input Group: Email -->
+<div class="space-y-1.5">
+<label class="font-label text-[10px] uppercase tracking-[0.1em] text-on-tertiary-fixed-variant font-bold px-1">Digital Address</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-highest/30 border-none rounded-xl px-4 py-4 text-white placeholder:text-on-surface-variant/40 focus:ring-1 focus:ring-secondary-container transition-all outline-none" placeholder="alex@monolith.ai" type="email"/>
+<div class="absolute bottom-0 left-4 right-4 h-[1px] bg-outline-variant/20 group-focus-within:bg-secondary-container shadow-[0_0_8px_rgba(111,0,190,0.4)] transition-all"></div>
+</div>
+</div>
+<!-- Input Group: Password -->
+<div class="space-y-1.5">
+<label class="font-label text-[10px] uppercase tracking-[0.1em] text-on-tertiary-fixed-variant font-bold px-1">Security Key</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-highest/30 border-none rounded-xl px-4 py-4 text-white placeholder:text-on-surface-variant/40 focus:ring-1 focus:ring-secondary-container transition-all outline-none" placeholder="••••••••••••" type="password"/>
+<div class="absolute bottom-0 left-4 right-4 h-[1px] bg-outline-variant/20 group-focus-within:bg-secondary-container shadow-[0_0_8px_rgba(111,0,190,0.4)] transition-all"></div>
+</div>
+</div>
+<!-- CTA Button -->
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold py-5 rounded-2xl shadow-[0_8px_24px_rgba(128,131,255,0.3)] active:scale-95 transition-all duration-200 mt-4 uppercase tracking-wider text-xs">
+                    Create Account
+                </button>
+<!-- Divider -->
+<div class="flex items-center py-4">
+<div class="flex-grow h-[1px] bg-outline-variant/10"></div>
+<span class="px-4 font-label text-[10px] uppercase tracking-widest text-on-surface-variant/40">Or connect via</span>
+<div class="flex-grow h-[1px] bg-outline-variant/10"></div>
+</div>
+<!-- Social Logins -->
+<div class="flex justify-center gap-6 pb-2">
+<button class="w-14 h-14 rounded-full bg-surface-bright/20 backdrop-blur-md flex items-center justify-center ring-1 ring-white/10 hover:ring-white/30 transition-all active:scale-90">
+<span class="material-symbols-outlined text-white text-2xl">brand_family</span>
+</button>
+<button class="w-14 h-14 rounded-full bg-surface-bright/20 backdrop-blur-md flex items-center justify-center ring-1 ring-white/10 hover:ring-white/30 transition-all active:scale-90">
+<span class="material-symbols-outlined text-white text-2xl">cloud</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Footer Note -->
+<p class="mt-10 font-label text-xs text-on-surface-variant/60">
+            Already a member? <span class="text-primary font-bold cursor-pointer hover:underline">Log in</span>
+</p>
+</main>
+<!-- Bottom Navigation Suppression Check: Transactional Flow = No BottomNavBar -->
+</body></html>

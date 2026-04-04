@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roni App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#353534",
+                    "surface-container": "#201f1f",
+                    "tertiary-fixed": "#dde3eb",
+                    "on-tertiary": "#2b3137",
+                    "inverse-on-surface": "#313030",
+                    "on-primary-fixed": "#07006c",
+                    "outline-variant": "#464554",
+                    "on-secondary": "#490080",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-fixed-variant": "#6900b3",
+                    "secondary-fixed": "#f0dbff",
+                    "primary-fixed-dim": "#c0c1ff",
+                    "error-container": "#93000a",
+                    "on-error": "#690005",
+                    "surface-tint": "#c0c1ff",
+                    "on-primary": "#1000a9",
+                    "on-tertiary-fixed-variant": "#41474e",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary-fixed-dim": "#c1c7cf",
+                    "primary": "#c0c1ff",
+                    "on-tertiary-fixed": "#161c22",
+                    "primary-fixed": "#e1e0ff",
+                    "tertiary": "#c1c7cf",
+                    "surface-bright": "#3a3939",
+                    "primary-container": "#8083ff",
+                    "error": "#ffb4ab",
+                    "on-surface": "#e5e2e1",
+                    "on-primary-container": "#0d0096",
+                    "secondary-fixed-dim": "#ddb7ff",
+                    "inverse-primary": "#494bd6",
+                    "background": "#131313",
+                    "on-background": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "surface-container-low": "#1c1b1b",
+                    "outline": "#908fa0",
+                    "secondary": "#ddb7ff",
+                    "on-secondary-container": "#d6a9ff",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#2f2ebe",
+                    "tertiary-container": "#8b9199",
+                    "on-surface-variant": "#c7c4d7",
+                    "secondary-container": "#6f00be",
+                    "surface": "#131313",
+                    "on-tertiary-container": "#242a30",
+                    "surface-variant": "#353534",
+                    "on-secondary-fixed": "#2c0051"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .liquid-glass {
+            background: rgba(28, 27, 27, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .light-leak-top {
+            box-shadow: inset 0 1px 0 0 rgba(192, 193, 255, 0.15);
+        }
+        .glass-card {
+            background: rgba(53, 53, 52, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(199, 196, 215, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-lowest text-on-surface font-body selection:bg-primary/30 min-h-screen flex overflow-hidden">
+<!-- NavigationDrawer (Sidebar) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col p-6 h-screen w-64 bg-[#1C1B1B] dark:bg-[#1C1B1B]/80 backdrop-blur-xl z-50">
+<!-- Brand Anchor -->
+<div class="mb-10 flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary-container flex items-center justify-center shadow-[0_0_15px_rgba(99,102,241,0.5)]">
+<span class="text-xl font-black text-on-primary-container">R</span>
+</div>
+<div>
+<h1 class="text-xl font-black text-[#C0C1FF] drop-shadow-[0_0_15px_rgba(99,102,241,0.5)] font-headline">Roni</h1>
+<p class="text-[10px] uppercase tracking-[0.1em] text-primary/60 font-bold">Premium</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Inbox: Inactive -->
+<a class="flex items-center gap-3 text-slate-400 px-4 py-2 hover:bg-[#353534] hover:scale-[1.02] transition-transform duration-200 rounded-lg group" href="#">
+<span class="material-symbols-outlined text-lg">inbox</span>
+<span class="font-medium text-sm">Inbox</span>
+</a>
+<!-- Today: Active (Determined contextually) -->
+<a class="flex items-center gap-3 bg-[#6F00BE]/20 text-[#C0C1FF] rounded-lg px-4 py-2 transition-all duration-300 scale-105" href="#">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-medium text-sm">Today</span>
+</a>
+<a class="flex items-center gap-3 text-slate-400 px-4 py-2 hover:bg-[#353534] hover:scale-[1.02] transition-transform duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg">event_upcoming</span>
+<span class="font-medium text-sm">Upcoming</span>
+</a>
+<a class="flex items-center gap-3 text-slate-400 px-4 py-2 hover:bg-[#353534] hover:scale-[1.02] transition-transform duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg">calendar_month</span>
+<span class="font-medium text-sm">Calendar</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-outline-variant/10">
+<a class="flex items-center gap-3 text-slate-400 px-4 py-2 hover:bg-[#353534] hover:scale-[1.02] transition-transform duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg">settings</span>
+<span class="font-medium text-sm">Settings</span>
+</a>
+<div class="mt-6 flex items-center gap-3 px-4">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary/20">
+<img alt="Roni Profile" class="w-full h-full object-cover" data-alt="close up of a modern minimalist 3D avatar icon with clean geometric shapes and soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm9rRjw8ZvaSMlNiMsBZrbMzQxRRsms74J-8pQYidQCam3_vCkwwpT2tZL4qwZ1mxuX1cS8V-AxPBMp5DBdvPEPIsS4dxzQ0A4suRyE-1RJuCkAhBC9aSMXRpYUhRERYuVJ2_kTt9pAx30ujOYpJZIFduGNb_dOucPsymS159aOf0M24EOy0XcXI2x1YuKjwQmobSYUBie3W8ORu-sCSlrpok_PZt-cuBGBM1Rg4vP9UdK8OQ4eb3oInnoBrpjW4Wnuq3vZq4iUDdD"/>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold text-on-surface">Roni</span>
+<span class="text-[10px] text-on-surface-variant">Productivity Mode</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 flex flex-1 h-screen overflow-hidden bg-surface-dim">
+<!-- Column 2: Task Stream -->
+<section class="flex-[1.2] flex flex-col min-w-[400px] border-r border-outline-variant/5">
+<!-- TopAppBar Internal -->
+<header class="flex items-center justify-between px-8 py-8 w-full">
+<div>
+<h2 class="font-headline font-extrabold text-3xl tracking-tight text-primary">Roni’s List</h2>
+<p class="text-on-surface-variant text-sm mt-1">Focusing on the Refractive Monolith</p>
+</div>
+<button class="w-12 h-12 rounded-full bg-gradient-to-tr from-primary-container to-secondary-container flex items-center justify-center text-white shadow-lg shadow-primary-container/20 hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-2xl">add</span>
+</button>
+</header>
+<div class="flex-1 overflow-y-auto px-8 pb-12 space-y-6">
+<!-- Task Category -->
+<div>
+<label class="text-[10px] font-black uppercase tracking-[0.2em] text-on-surface-variant/60 block mb-4">Priority Flow</label>
+<div class="space-y-4">
+<!-- Task Card 1 (Active/Normal) -->
+<div class="glass-card light-leak-top rounded-xl p-5 hover:bg-surface-container-high/60 transition-colors cursor-default">
+<div class="flex items-start gap-4">
+<div class="mt-1 w-5 h-5 rounded border border-outline flex items-center justify-center"></div>
+<div class="flex-1">
+<h3 class="text-on-surface font-semibold text-lg leading-tight">Implement glass refraction shaders</h3>
+<div class="mt-3 space-y-2">
+<div class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+<span>Update Tailwind config for v2026</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+<span>Refactor monolith components</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40">drag_indicator</span>
+</div>
+</div>
+<!-- Task Card 2 (Dragged State) -->
+<div class="glass-card light-leak-top rounded-xl p-5 scale-[1.02] border-primary/40 shadow-[0_0_30px_rgba(192,193,255,0.15)] opacity-80 rotate-1 cursor-grabbing">
+<div class="flex items-start gap-4">
+<div class="mt-1 w-5 h-5 rounded border border-primary-container flex items-center justify-center"></div>
+<div class="flex-1">
+<h3 class="text-on-surface font-semibold text-lg leading-tight">Design system audit: 2026 Edition</h3>
+<div class="mt-2 flex items-center gap-3">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-[10px] font-bold text-secondary uppercase tracking-wider">Review</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+</div>
+<!-- Task Card 3 (Completed / Dissolving Effect) -->
+<div class="opacity-40 grayscale-[0.5] rounded-xl p-5 relative overflow-hidden group">
+<div class="flex items-start gap-4 line-through text-on-surface-variant">
+<div class="mt-1 w-5 h-5 rounded bg-primary/20 border border-primary/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-primary">check</span>
+</div>
+<div class="flex-1">
+<h3 class="font-medium">Define liquid motion curves</h3>
+</div>
+</div>
+<!-- Subtle splash element -->
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+</div>
+</div>
+</div>
+<!-- Bento Style Secondary Section -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col justify-between aspect-square border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4">bolt</span>
+<div>
+<h4 class="font-bold text-xl leading-tight">Quick Strike</h4>
+<p class="text-xs text-on-surface-variant mt-2">Finish 3 micro-tasks to unlock flow mode.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 flex flex-col justify-between aspect-square border border-outline-variant/10 relative overflow-hidden">
+<div class="absolute -top-4 -right-4 w-24 h-24 bg-secondary-container/10 blur-3xl"></div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">psychology</span>
+<div>
+<h4 class="font-bold text-xl leading-tight">Deep Work</h4>
+<p class="text-xs text-on-surface-variant mt-2">2.5 hours scheduled today.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Column 3: Calendar Grid -->
+<section class="flex-1 flex flex-col bg-surface-container-lowest/50 backdrop-blur-md">
+<header class="px-8 py-9 flex items-center justify-between">
+<h2 class="font-headline font-bold text-xl text-on-surface">Weekly Horizon</h2>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</header>
+<div class="flex-1 px-4 grid grid-cols-7 h-full">
+<!-- Calendar Columns -->
+<!-- Day 1 -->
+<div class="flex flex-col border-r border-outline-variant/5">
+<div class="py-4 text-center">
+<span class="block text-[10px] font-black text-on-surface-variant/40 uppercase tracking-widest">Mon</span>
+<span class="text-lg font-headline font-extrabold mt-1">12</span>
+</div>
+<div class="flex-1 p-2 space-y-2">
+<div class="glass-card rounded-lg p-3 text-[10px] font-bold border-l-2 border-l-primary leading-tight">
+                            Design Sync
+                        </div>
+</div>
+</div>
+<!-- Day 2 -->
+<div class="flex flex-col border-r border-outline-variant/5">
+<div class="py-4 text-center">
+<span class="block text-[10px] font-black text-on-surface-variant/40 uppercase tracking-widest">Tue</span>
+<span class="text-lg font-headline font-extrabold mt-1 text-primary">13</span>
+</div>
+<div class="flex-1 p-2 space-y-2 bg-primary/5">
+<div class="bg-primary/20 rounded-lg p-3 text-[10px] font-bold border-l-2 border-l-primary leading-tight">
+                            Refraction Dev
+                        </div>
+<!-- Ghost drop target -->
+<div class="border-2 border-dashed border-primary/20 rounded-lg h-24 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/20">add</span>
+</div>
+</div>
+</div>
+<!-- Day 3 -->
+<div class="flex flex-col border-r border-outline-variant/5">
+<div class="py-4 text-center">
+<span class="block text-[10px] font-black text-on-surface-variant/40 uppercase tracking-widest">Wed</span>
+<span class="text-lg font-headline font-extrabold mt-1">14</span>
+</div>
+<div class="flex-1 p-2 space-y-2">
+<div class="glass-card rounded-lg p-3 text-[10px] font-bold border-l-2 border-l-secondary leading-tight">
+                            Personal Brand
+                        </div>
+</div>
+</div>
+<!-- Day 4 -->
+<div class="flex flex-col border-r border-outline-variant/5">
+<div class="py-4 text-center">
+<span class="block text-[10px] font-black text-on-surface-variant/40 uppercase tracking-widest">Thu</span>
+<span class="text-lg font-headline font-extrabold mt-1">15</span>
+</div>
+<div class="flex-1 p-2"></div>
+</div>
+<!-- Day 5 -->
+<div class="flex flex-col border-r border-outline-variant/5">
+<div class="py-4 text-center">
+<span class="block text-[10px] font-black text-on-surface-variant/40 uppercase tracking-widest">Fri</span>
+<span class="text-lg font-headline font-extrabold mt-1">16</span>
+</div>
+<div class="flex-1 p-2 space-y-2">
+<div class="glass-card rounded-lg p-3 text-[10px] font-bold border-l-2 border-l-tertiary leading-tight">
+                            Project Release
+                        </div>
+</div>
+</div>
+<!-- Day 6 -->
+<div class="flex flex-col border-r border-outline-variant/5 bg-surface-container-lowest/30">
+<div class="py-4 text-center">
+<span class="block text-[10px] font-black text-on-surface-variant/20 uppercase tracking-widest">Sat</span>
+<span class="text-lg font-headline font-extrabold mt-1 text-on-surface-variant/40">17</span>
+</div>
+<div class="flex-1"></div>
+</div>
+<!-- Day 7 -->
+<div class="flex flex-col bg-surface-container-lowest/30">
+<div class="py-4 text-center">
+<span class="block text-[10px] font-black text-on-surface-variant/20 uppercase tracking-widest">Sun</span>
+<span class="text-lg font-headline font-extrabold mt-1 text-on-surface-variant/40">18</span>
+</div>
+<div class="flex-1"></div>
+</div>
+</div>
+<!-- Bottom Metric Bar -->
+<footer class="h-24 border-t border-outline-variant/5 px-8 flex items-center justify-between">
+<div class="flex items-center gap-6">
+<div>
+<span class="block text-[10px] font-black text-on-surface-variant/60 uppercase tracking-widest mb-1">Focus Time</span>
+<span class="text-2xl font-headline font-extrabold">04:22</span>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/20"></div>
+<div>
+<span class="block text-[10px] font-black text-on-surface-variant/60 uppercase tracking-widest mb-1">Velocity</span>
+<span class="text-2xl font-headline font-extrabold text-secondary">88%</span>
+</div>
+</div>
+<div class="flex -space-x-2">
+<img alt="Teammate 1" class="w-8 h-8 rounded-full border-2 border-surface-container-lowest" data-alt="professional portrait of a creative designer in soft cool lighting with minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9NDIB7TF37-nUp0sQ7jidx-8IuOIMyK-jnL7BGYATwRaFgLNzvPvlF8TBXfnGEQt5sjciKiZ8D5ax6wwbXWVVpJF6iDWsMGlf3o0jta48eoAANnx2TxTv_TwPW0n91hk1I8elt_a3RhXzkNpFRElDIb-sKHoSxkDXYJ4j_TtWPrjVYx5CECITlmq9OyzP_uwCPf56pB_NuYV0zjDnjruYppEkWOjNDSnUGsWBCk5TiEObWHwelqz9EsEaOmBIEq2YBzoEy0ZHhXh5"/>
+<img alt="Teammate 2" class="w-8 h-8 rounded-full border-2 border-surface-container-lowest" data-alt="professional portrait of a software engineer in high key lighting with clean aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnbP4to5TlYtAiJuBH9-xmN-Tq1qvc41xZj0svD2m7GRnEM7R1YC4TYIrhbTTI9qLkUb3ReBW1S_DPWwEPMHHpxiT0uscHQNC_UoERgCB8LKoQyjLElWbMBtCuMzPXfjk-muve2PxqzwQm1ajUcK1OTuhappVnFXg-G9f5epwgGPhZ77D-MQ9nQMmuZHJtpWZgb37Egb9hSmmBW41pRGqT_4-LKXLmTAM686VyyiCpmKJopzKUgbVZvnCIEkRvfkWCuF5vA5xFS9fF"/>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-lowest bg-surface-container-high flex items-center justify-center text-[10px] font-bold">+3</div>
+</div>
+</footer>
+</section>
+</main>
+<!-- Refractive Glass Overlays & Light Effects -->
+<div class="fixed top-0 right-0 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/4 pointer-events-none z-0"></div>
+<div class="fixed bottom-0 left-0 w-[400px] h-[400px] bg-secondary-container/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/4 pointer-events-none z-0"></div>
+</body></html>

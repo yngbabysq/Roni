@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roni Onboarding - Master Your Time</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#464554",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-secondary": "#490080",
+                        "surface-container": "#201f1f",
+                        "secondary-fixed-dim": "#ddb7ff",
+                        "tertiary-container": "#8b9199",
+                        "on-primary": "#1000a9",
+                        "primary-container": "#8083ff",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#41474e",
+                        "surface-variant": "#353534",
+                        "on-error": "#690005",
+                        "secondary-container": "#6f00be",
+                        "primary-fixed": "#e1e0ff",
+                        "on-surface": "#e5e2e1",
+                        "outline": "#908fa0",
+                        "on-tertiary-container": "#242a30",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "inverse-on-surface": "#313030",
+                        "on-tertiary": "#2b3137",
+                        "on-primary-fixed": "#07006c",
+                        "on-secondary-fixed": "#2c0051",
+                        "primary": "#c0c1ff",
+                        "surface-bright": "#3a3939",
+                        "background": "#131313",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#dde3eb",
+                        "surface": "#131313",
+                        "tertiary-fixed-dim": "#c1c7cf",
+                        "surface-dim": "#131313",
+                        "surface-tint": "#c0c1ff",
+                        "secondary-fixed": "#f0dbff",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-primary": "#494bd6",
+                        "secondary": "#ddb7ff",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-container": "#d6a9ff",
+                        "on-secondary-fixed-variant": "#6900b3",
+                        "on-surface-variant": "#c7c4d7",
+                        "on-tertiary-fixed": "#161c22",
+                        "surface-container-highest": "#353534",
+                        "tertiary": "#c1c7cf",
+                        "on-primary-container": "#0d0096",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-high": "#2a2a2a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .liquid-glass {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .light-leak-top {
+            border-top: 1px solid rgba(192, 193, 255, 0.15);
+        }
+        .oni-glow {
+            box-shadow: 0 0 30px 4px rgba(128, 131, 255, 0.4);
+        }
+        .dot-grid {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .mac-shadow {
+            box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex items-center justify-center p-8 overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="fixed left-0 top-0 bottom-0 flex flex-col py-8 bg-neutral-900/80 backdrop-blur-xl h-full w-64 border-r border-white/10 font-['Manrope'] tracking-tight z-50">
+<div class="px-6 mb-12 flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed" style="font-variation-settings: 'FILL' 1;">magic_button</span>
+</div>
+<div>
+<h1 class="text-2xl font-bold tracking-tighter text-white">Roni</h1>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Productivity Refined</p>
+</div>
+</div>
+<nav class="flex-1 px-3 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-neutral-500 hover:text-neutral-300 hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="door_open">door_open</span>
+<span class="text-sm font-medium">Welcome</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-neutral-500 hover:text-neutral-300 hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="magic_button">magic_button</span>
+<span class="text-sm font-medium">Core Actions</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-indigo-600/20 text-indigo-300 rounded-lg transition-all duration-300 ease-out scale-102" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="text-sm font-medium">Schedule</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-neutral-500 hover:text-neutral-300 hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+<span class="text-sm font-medium">Finalize</span>
+</a>
+</nav>
+<div class="mt-auto px-6">
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/10">
+<p class="text-xs text-on-surface-variant mb-2">Step 3 of 4</p>
+<div class="h-1 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full w-3/4 bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main macOS Window Simulator -->
+<main class="ml-64 w-full max-w-6xl aspect-[16/10] bg-surface-dim rounded-2xl relative overflow-hidden flex flex-col mac-shadow border border-outline-variant/20">
+<!-- Top App Bar -->
+<header class="h-16 flex items-center justify-between px-8 z-50">
+<div class="flex items-center gap-2">
+<div class="flex gap-1.5">
+<div class="w-3 h-3 rounded-full bg-error/40 border border-error/20"></div>
+<div class="w-3 h-3 rounded-full bg-secondary-fixed-dim/40 border border-secondary-fixed-dim/20"></div>
+<div class="w-3 h-3 rounded-full bg-primary-fixed-dim/40 border border-primary-fixed-dim/20"></div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-white transition-colors cursor-pointer" data-icon="help_outline">help_outline</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-white transition-colors cursor-pointer" data-icon="settings">settings</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a professional man in a dark environment with soft teal and purple studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_98B9nGt1vqelpXFBkbvu3ne9mbqJ67yu8PNKSXS9aVR_tr0E9vWQ27S4gMJJ1pUgmq_MIHQfzXLPAyIsMquX2sL7nDVLNOrTEcHcE-ULlx6mAA6x2v08XzkDsu1mUJzF4EgtRfxkSksdqftYR89vVdT-TYytXBSwPkiyf3wnsu1IGHJwbYly25LkMPP6aGc1kJZoi5RkxwAtNqprmW7zuPONIe2w6QFL5tMNG9ZjAUI7AXcaL0s6D6nlFoUM3AlhoEbJIml9Y39U"/>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<section class="flex-1 p-12 flex flex-col gap-8 relative">
+<!-- Hero Header -->
+<div class="relative z-10">
+<h2 class="text-5xl font-extrabold font-headline tracking-tighter text-white mb-2">Master Your Time.</h2>
+<p class="text-on-surface-variant max-w-md font-body leading-relaxed">Drag your tasks directly into the calendar. Snapping points and liquid transitions handle the rest.</p>
+</div>
+<!-- Central Glass Calendar Card -->
+<div class="flex-1 flex gap-6 mt-4">
+<!-- Floating Task Sidebar (Source) -->
+<div class="w-72 flex flex-col gap-3">
+<h3 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-2">Pending Tasks</h3>
+<div class="space-y-3">
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/10 flex items-center gap-3 cursor-grab hover:bg-surface-container-high transition-colors">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="text-sm">Deep Work: Liquid UI</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/10 flex items-center gap-3 cursor-grab hover:bg-surface-container-high transition-colors">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-sm">System Architecture Review</span>
+</div>
+<!-- ACTIVE DRAG STATE MOCKUP -->
+<div class="p-4 rounded-xl liquid-glass border border-primary/40 flex items-center gap-3 cursor-grabbing oni-glow scale-110 rotate-3 z-50 transition-transform">
+<div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div>
+<span class="text-sm font-semibold">Brand Identity Sync</span>
+<span class="material-symbols-outlined text-[16px] ml-auto" data-icon="drag_indicator">drag_indicator</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/10 flex items-center gap-3 cursor-grab hover:bg-surface-container-high transition-colors">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+<span class="text-sm">Client Pitch Preparation</span>
+</div>
+</div>
+</div>
+<!-- Calendar View -->
+<div class="flex-1 liquid-glass rounded-3xl light-leak-top overflow-hidden flex flex-col relative border border-outline-variant/10">
+<!-- Calendar Header -->
+<div class="h-14 border-b border-white/5 flex items-center px-6 gap-8">
+<div class="flex items-center gap-4">
+<span class="text-sm font-bold text-white">October 2026</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-xs p-1 rounded hover:bg-white/5 cursor-pointer" data-icon="chevron_left">chevron_left</span>
+<span class="material-symbols-outlined text-xs p-1 rounded hover:bg-white/5 cursor-pointer" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<div class="ml-auto flex gap-1 bg-surface-container-lowest/50 p-1 rounded-lg">
+<span class="px-3 py-1 text-[10px] font-bold bg-surface-container text-white rounded-md">Day</span>
+<span class="px-3 py-1 text-[10px] font-bold text-on-surface-variant">3-Day</span>
+<span class="px-3 py-1 text-[10px] font-bold text-on-surface-variant">Week</span>
+</div>
+</div>
+<!-- Calendar Grid -->
+<div class="flex-1 flex dot-grid relative">
+<!-- Time Column -->
+<div class="w-16 border-r border-white/5 flex flex-col py-4">
+<div class="h-16 text-[10px] text-on-surface-variant flex items-center justify-center">09:00</div>
+<div class="h-16 text-[10px] text-on-surface-variant flex items-center justify-center">10:00</div>
+<div class="h-16 text-[10px] text-on-surface-variant flex items-center justify-center">11:00</div>
+<div class="h-16 text-[10px] text-on-surface-variant flex items-center justify-center">12:00</div>
+<div class="h-16 text-[10px] text-on-surface-variant flex items-center justify-center">13:00</div>
+</div>
+<!-- Days Columns -->
+<div class="flex-1 grid grid-cols-3">
+<!-- Mon -->
+<div class="border-r border-white/5 relative">
+<div class="p-2 h-10 flex items-center justify-center border-b border-white/5 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Mon 12</div>
+<!-- Scheduled Task -->
+<div class="absolute top-24 left-2 right-2 h-20 rounded-lg bg-surface-container border-l-4 border-primary p-3 flex flex-col gap-1">
+<span class="text-[11px] font-bold text-white">Project Kickoff</span>
+<span class="text-[10px] text-on-surface-variant">09:30 - 10:45</span>
+</div>
+</div>
+<!-- Tue -->
+<div class="border-r border-white/5 relative">
+<div class="p-2 h-10 flex items-center justify-center border-b border-white/5 text-[10px] font-bold uppercase tracking-widest text-white">Tue 13</div>
+<!-- The DROP TARGET Glow -->
+<div class="absolute top-44 left-2 right-2 h-32 rounded-xl bg-primary/10 border-2 border-dashed border-primary/30 flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 blur-xl"></div>
+<span class="relative text-[10px] font-medium text-primary uppercase tracking-tighter">Snap to 11:15</span>
+</div>
+</div>
+<!-- Wed -->
+<div class="relative">
+<div class="p-2 h-10 flex items-center justify-center border-b border-white/5 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Wed 14</div>
+<div class="absolute top-64 left-2 right-2 h-12 rounded-lg bg-surface-container-high/40 border border-white/5 p-3 flex flex-col justify-center">
+<span class="text-[11px] font-medium text-on-surface-variant">Internal Sync</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Action Area -->
+<div class="mt-auto flex items-center justify-between pt-8 border-t border-white/5">
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<img class="w-8 h-8 rounded-full border-2 border-surface-dim object-cover" data-alt="portrait of a confident woman smiling with warm sunlight hitting her face in a modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABjsOk0C8PDaZnf4yLqCvlFCGBbcDZgji90ZRCmkwhiaJi4YrlATyrOcRYMu5W7OPiXx4SVmmU3fULkLDAGZzlRMTqVPrpOEnS7dM9qZN3CHr6WgKHaP6b7reh1tvUvFciRLl7jM0La5orb12swKzGkTCSM4H7Y9GIJBn4IlvTRKOm9FUW5Wz8P53a2TNBKMjI0RjcFStXYT0WphldExVmZClfn42kGrxnYflXaG632E1VrWLmJfg9QRWcpfF6tPYl5VYOS17BersE"/>
+<img class="w-8 h-8 rounded-full border-2 border-surface-dim object-cover" data-alt="portrait of a man with a beard looking directly at the camera with dramatic moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADZuzdPNMGHJMbbyzgtBT0rYOnQoJW6cMNlBRrXMLv0pKRWP-r2ePdgZUA8n4UmHJwmSitwwR4sqhAK4P4sCaXBulEhHRmuCaDqw9ysahqIeMjFNlZIGOuQyNzJYTuPiCK-EhpastzDD4FDHIz_5blcdxREEm-bgF-UQtcUatBFu9XuyAQwlEMc3sMK8vB8ohaQaaEZdAN3I-OqiYe425DTHHexkEuNfNwNcMdHhegHZmsols_qDXioMdKO5_nihEyEDb0Ei4ncigW"/>
+<div class="w-8 h-8 rounded-full border-2 border-surface-dim bg-surface-container-high flex items-center justify-center text-[10px] font-bold">+12</div>
+</div>
+<p class="text-xs text-on-surface-variant">Join 2.4k teams mastering their focus this week.</p>
+</div>
+<button class="px-8 py-4 bg-gradient-to-tr from-primary to-primary-container text-on-primary-container font-bold rounded-xl flex items-center gap-3 scale-102 hover:scale-105 active:scale-95 transition-transform duration-200 shadow-lg shadow-primary/20">
+                    Start Using Roni
+                    <span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Decorative Light Blobs -->
+<div class="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/10 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="absolute top-40 -left-20 w-60 h-60 bg-secondary/10 blur-[100px] rounded-full pointer-events-none"></div>
+</section>
+</main>
+</body></html>

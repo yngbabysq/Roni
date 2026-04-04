@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roni | Flow State, Mastered</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#201f1f",
+                        "on-tertiary-container": "#242a30",
+                        "on-secondary-fixed": "#2c0051",
+                        "on-primary-container": "#ffffff",
+                        "outline-variant": "#464554",
+                        "tertiary-fixed": "#dde3eb",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary": "#2b3137",
+                        "on-secondary": "#490080",
+                        "inverse-primary": "#6366F1",
+                        "surface-dim": "#131313",
+                        "on-primary": "#ffffff",
+                        "on-error": "#690005",
+                        "on-surface": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#c1c7cf",
+                        "surface-tint": "#6366F1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-container": "#4F46E5",
+                        "primary": "#6366F1",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary-fixed-dim": "#ddb7ff",
+                        "on-secondary-fixed-variant": "#6900b3",
+                        "error-container": "#93000a",
+                        "tertiary": "#c1c7cf",
+                        "secondary-fixed": "#f0dbff",
+                        "primary-fixed": "#e1e0ff",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#07006c",
+                        "surface-variant": "#353534",
+                        "secondary": "#ddb7ff",
+                        "on-surface-variant": "#c7c4d7",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "background": "#0d0d0d",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-container": "#d6a9ff",
+                        "primary-fixed-dim": "#6366F1",
+                        "on-tertiary-fixed": "#161c22",
+                        "outline": "#908fa0",
+                        "on-tertiary-fixed-variant": "#41474e",
+                        "surface-container-highest": "#353534",
+                        "surface-bright": "#3a3939",
+                        "surface": "#131313",
+                        "secondary-container": "#6f00be",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-container": "#8b9199"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0d0d0d;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(28, 27, 27, 0.7);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(99, 102, 241, 0.15);
+        }
+        .light-leak-edge {
+            box-shadow: inset 0 1px 0 0 rgba(99, 102, 241, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #818CF8 0%, #6366F1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .obsidian-depth {
+            background: radial-gradient(circle at top center, #1c1b1b 0%, #0d0d0d 100%);
+        }
+    </style>
+</head>
+<body class="selection:bg-primary/30">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#0E0E0E]/80 backdrop-blur-xl border-b border-[#6366F1]/10 h-14 flex justify-between items-center px-6 w-full">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-white font-['Manrope'] tracking-tight">Roni</span>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-[#818CF8] font-medium transition-colors font-['Manrope']" href="#">Manifesto</a>
+<a class="text-zinc-500 hover:bg-white/5 transition-colors px-3 py-1 rounded-lg font-['Manrope']" href="#">Features</a>
+<a class="text-zinc-500 hover:bg-white/5 transition-colors px-3 py-1 rounded-lg font-['Manrope']" href="#">Enterprise</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-zinc-500 hover:text-[#6366F1] transition-all">search</button>
+<button class="material-symbols-outlined text-zinc-500 hover:text-[#6366F1] transition-all">settings</button>
+<button class="bg-[#6366F1] text-white px-4 py-1.5 rounded-full font-bold text-sm hover:scale-105 active:scale-95 transition-all">Get Started</button>
+</div>
+</header>
+<main class="relative pt-14">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6">
+<!-- Roni Wordmark Replacing Logo -->
+<div class="relative w-full flex items-center justify-center mb-12">
+<div class="absolute inset-0 bg-primary/10 blur-[120px] rounded-full scale-150"></div>
+<div class="relative z-10 text-9xl md:text-[14rem] font-black font-headline tracking-tighter text-white drop-shadow-[0_0_50px_rgba(99,102,241,0.4)] opacity-90 select-none">
+                    Roni
+                </div>
+<!-- Glass Ring Refraction -->
+<div class="absolute inset-0 border-[0.5px] border-primary/20 rounded-full scale-110 opacity-50 max-w-2xl mx-auto aspect-video"></div>
+<div class="absolute inset-0 border-[0.5px] border-white/10 rounded-full scale-125 opacity-30 max-w-3xl mx-auto aspect-video"></div>
+</div>
+<div class="max-w-4xl text-center z-20">
+<h1 class="text-5xl md:text-8xl font-headline font-extrabold tracking-tighter mb-6 leading-[0.9] text-white">
+                    Roni: <span class="text-gradient">Flow State, Mastered.</span>
+</h1>
+<p class="text-lg md:text-2xl font-body text-on-surface-variant/80 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    The spatial productivity engine designed for the high-agency mind.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-xl text-lg flex items-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-[0_20px_40px_rgba(99,102,241,0.3)]">
+                        Enter the Monolith
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-8 py-4 bg-white/5 backdrop-blur-md border-t border-white/10 text-white font-semibold rounded-xl text-lg hover:bg-white/10 transition-all">
+                        Watch Vision
+                    </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+<span class="text-[10px] tracking-widest uppercase font-label">Scroll to peek</span>
+<div class="w-px h-12 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</section>
+<!-- App Peek Section -->
+<section class="relative py-32 px-6 overflow-hidden">
+<div class="max-w-6xl mx-auto relative">
+<!-- Decorative Light Leak -->
+<div class="absolute -top-40 -left-40 w-96 h-96 bg-primary/20 blur-[140px] rounded-full"></div>
+<!-- Main App Window Mockup -->
+<div class="relative z-10 glass-panel rounded-2xl shadow-[0_50px_100px_rgba(0,0,0,0.6)] overflow-hidden light-leak-edge border border-white/5">
+<!-- Window Controls -->
+<div class="h-10 bg-white/5 flex items-center px-4 gap-2 border-b border-white/5">
+<div class="w-3 h-3 rounded-full bg-[#FF5F57]"></div>
+<div class="w-3 h-3 rounded-full bg-[#FEBC2E]"></div>
+<div class="w-3 h-3 rounded-full bg-[#28C840]"></div>
+<div class="ml-4 text-[11px] font-medium text-zinc-500 tracking-wide font-label uppercase">Task Stream — Roni</div>
+</div>
+<div class="flex h-[600px]">
+<!-- App Sidebar -->
+<aside class="w-64 bg-[#1C1B1B] p-6 flex flex-col gap-2 border-r border-white/5">
+<div class="mb-8">
+<div class="flex items-center gap-3 px-3 py-2">
+<div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold">R</div>
+<span class="font-headline font-bold text-white">Roni</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="bg-primary/20 text-[#818CF8] rounded-lg px-3 py-2 flex items-center gap-3">
+<span class="material-symbols-outlined text-sm">inbox</span>
+<span class="text-sm font-label">Inbox</span>
+</div>
+<div class="text-zinc-400 hover:bg-white/5 rounded-lg px-3 py-2 flex items-center gap-3 transition-colors">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-sm font-label">Today</span>
+</div>
+<div class="text-zinc-400 hover:bg-white/5 rounded-lg px-3 py-2 flex items-center gap-3 transition-colors">
+<span class="material-symbols-outlined text-sm">event_upcoming</span>
+<span class="text-sm font-label">Upcoming</span>
+</div>
+<div class="text-zinc-400 hover:bg-white/5 rounded-lg px-3 py-2 flex items-center gap-3 transition-colors">
+<span class="material-symbols-outlined text-sm">folder</span>
+<span class="text-sm font-label">Projects</span>
+</div>
+</div>
+<div class="mt-auto">
+<button class="w-full py-2.5 bg-white/5 rounded-lg text-sm font-medium border-t border-white/10 hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xs">add</span>
+                                    New Task
+                                </button>
+</div>
+</aside>
+<!-- Content Canvas -->
+<section class="flex-1 bg-[#131313] p-12 overflow-y-auto">
+<div class="max-w-2xl mx-auto">
+<header class="mb-12">
+<h2 class="text-4xl font-headline font-bold mb-2">My Task Stream</h2>
+<p class="text-on-surface-variant text-sm">Deep work session: 45m remaining</p>
+</header>
+<div class="space-y-4">
+<!-- Task Card -->
+<div class="group bg-[#0E0E0E] rounded-xl p-5 border border-white/5 hover:border-primary/30 transition-all light-leak-edge">
+<div class="flex items-start justify-between">
+<div class="flex gap-4">
+<div class="mt-1 w-5 h-5 rounded-md border-2 border-primary/40 flex items-center justify-center hover:bg-primary/20 transition-all cursor-pointer"></div>
+<div>
+<h3 class="text-lg font-medium text-white group-hover:text-primary transition-colors">Refactor the spatial engine kernel</h3>
+<p class="text-zinc-500 text-sm mt-1 leading-relaxed">Optimize the memory allocation for 3D textures in the primary buffer...</p>
+</div>
+</div>
+<span class="text-[10px] font-label px-2 py-1 rounded-full bg-primary/20 text-[#818CF8] uppercase tracking-wider">High Prio</span>
+</div>
+</div>
+<div class="group bg-[#0E0E0E] rounded-xl p-5 border border-white/5 hover:border-primary/30 transition-all light-leak-edge">
+<div class="flex items-start justify-between">
+<div class="flex gap-4">
+<div class="mt-1 w-5 h-5 rounded-md border-2 border-primary/40 flex items-center justify-center"></div>
+<div>
+<h3 class="text-lg font-medium text-white group-hover:text-primary transition-colors">Draft Roni Design System Manifesto</h3>
+<p class="text-zinc-500 text-sm mt-1 leading-relaxed">Define the "Refractive Monolith" creative north star for 2026...</p>
+</div>
+</div>
+<span class="text-[10px] font-label px-2 py-1 rounded-full bg-surface-container-high text-zinc-400 uppercase tracking-wider">Writing</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Abstract Bento Features Grid -->
+<div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-surface-container-low rounded-3xl p-10 border border-white/5 light-leak-edge overflow-hidden relative group">
+<div class="relative z-10">
+<span class="text-primary font-bold text-xs uppercase tracking-widest mb-4 block">Spatial Memory</span>
+<h3 class="text-3xl font-headline font-bold mb-4">Mind-mapped workflows.</h3>
+<p class="text-on-surface-variant max-w-sm">Unlike lists, Roni organizes tasks based on your cognitive geography. Your work has a place.</p>
+</div>
+<div class="absolute -right-20 -bottom-20 w-80 h-80 opacity-20 group-hover:opacity-40 transition-opacity">
+<img class="w-full h-full object-contain filter grayscale invert" data-alt="abstract procedural nodes and connections in a dark violet and indigo futuristic layout with soft glowing lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAF3dp4wKQm9aIHLcODkq1Zz66UWqDniz6VAKLKWbhLdARUXA76606eUvxBmSktIiL5ZVedeYEv3buV_H7AycNda10g3DPQJWxQsmROTiAG7-1OzAFwKRzHEgb5G9q8ns1hb30NVtUTeGe5qs4fDUUh0Azn9umLGIiycekMMpZveNgxtbEW2x9CfpDrHsW1u3RdkzBBLXCgKElTC6UQ6z7OuBjtV4xmAafFZAi672vJ_Q1wCP_BW-x7Ltct_W4s9lRKy81VYX3cTJu"/>
+</div>
+</div>
+<div class="bg-[#1C1B1B] rounded-3xl p-10 border border-white/5 light-leak-edge flex flex-col justify-between">
+<div>
+<span class="text-[#818CF8] font-bold text-xs uppercase tracking-widest mb-4 block">Performance</span>
+<h3 class="text-3xl font-headline font-bold mb-4">Swift as light.</h3>
+</div>
+<div class="text-on-surface-variant">Built on web-optimized engines for zero-latency interactions and buttery-smooth obsidian transitions.</div>
+</div>
+<div class="bg-[#1C1B1B] rounded-3xl p-10 border border-white/5 light-leak-edge flex flex-col justify-between">
+<div>
+<span class="text-[#818CF8] font-bold text-xs uppercase tracking-widest mb-4 block">Focus Engine</span>
+<h3 class="text-3xl font-headline font-bold mb-4">Zen mode.</h3>
+</div>
+<div class="text-on-surface-variant">Automatic notification suppression and ambient soundscapes tuned to your focus level.</div>
+</div>
+<div class="md:col-span-2 bg-[#0E0E0E] rounded-3xl p-10 border border-white/5 light-leak-edge relative overflow-hidden flex items-center">
+<div class="w-1/2">
+<span class="text-primary font-bold text-xs uppercase tracking-widest mb-4 block">Deep Search</span>
+<h3 class="text-3xl font-headline font-bold mb-4">Neural indexing.</h3>
+<p class="text-on-surface-variant">Find anything in your life instantly with semantic query processing that understands context, not just keywords.</p>
+</div>
+<div class="w-1/2 flex justify-center">
+<div class="w-48 h-48 bg-primary/20 blur-[60px] absolute"></div>
+<span class="material-symbols-outlined text-8xl text-primary/40 relative z-10" style="font-variation-settings: 'FILL' 1;">neurology</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-40 relative flex flex-col items-center justify-center px-6">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent"></div>
+<div class="max-w-2xl text-center z-10">
+<h2 class="text-5xl md:text-7xl font-headline font-bold mb-8 tracking-tighter">Your mind, <br/><span class="text-gradient">evolved.</span></h2>
+<p class="text-on-surface-variant text-lg mb-12">Join 40,000+ high-agency thinkers mastering their output with Roni.</p>
+<button class="px-12 py-5 bg-white text-black font-black rounded-2xl text-xl hover:scale-105 transition-all shadow-[0_30px_60px_rgba(255,255,255,0.1)]">
+                    Initialize Core
+                </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-20 border-t border-white/5 px-6">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="space-y-4">
+<span class="text-2xl font-black text-white font-headline">Roni</span>
+<p class="text-zinc-500 text-sm max-w-xs">Building the future of spatial productivity for the world's most ambitious individuals.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold text-sm uppercase tracking-tighter">Product</h4>
+<a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Get Started</a>
+<a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Changelog</a>
+<a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Beta Access</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold text-sm uppercase tracking-tighter">Company</h4>
+<a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Manifesto</a>
+<a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Privacy</a>
+<a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-bold text-sm uppercase tracking-tighter">Social</h4>
+<a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">X (Twitter)</a>
+<a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">Discord</a>
+<a class="text-zinc-500 hover:text-primary transition-colors text-sm" href="#">GitHub</a>
+</div>
+</div>
+</div>
+<div class="max-w-6xl mx-auto mt-20 text-center text-[10px] text-zinc-700 tracking-[0.2em] uppercase font-label">
+                © 2026 Roni Systems Inc. All rights reserved. Designed in obsidian depth.
+            </div>
+</footer>
+</main>
+</body></html>
