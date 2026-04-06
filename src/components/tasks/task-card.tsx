@@ -27,7 +27,7 @@ export function TaskCard({ task }: TaskCardProps) {
   const [isChecking, setIsChecking] = useState(false);
   const { mutate: completeTask } = useCompleteTask();
   const { setSelectedTaskId, setIsTaskDetailOpen } = useUIStore();
-  const priority = PRIORITY_CONFIG[task.priority];
+  const priority = PRIORITY_CONFIG[task.priority as keyof typeof PRIORITY_CONFIG] ?? PRIORITY_CONFIG.low;
 
   function handleComplete() {
     setIsChecking(true);
