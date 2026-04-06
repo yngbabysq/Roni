@@ -5,22 +5,22 @@ import { Search } from "lucide-react";
 import { useUIStore } from "@/stores/ui-store";
 
 const PAGE_TITLES: Record<string, string> = {
-  "/app/inbox": "Task Stream",
-  "/app/today": "Today",
-  "/app/upcoming": "Upcoming",
-  "/app/anytime": "Anytime",
-  "/app/someday": "Someday",
-  "/app/calendar": "Calendar",
-  "/app/focus": "Focus",
-  "/app/insights": "Insights",
-  "/app/settings": "Settings",
+  "/inbox": "Task Stream",
+  "/today": "Today",
+  "/upcoming": "Upcoming",
+  "/anytime": "Anytime",
+  "/someday": "Someday",
+  "/calendar": "Calendar",
+  "/focus": "Focus",
+  "/insights": "Insights",
+  "/settings": "Settings",
 };
 
 export function TopBar() {
   const pathname = usePathname();
   const { setIsCommandPaletteOpen } = useUIStore();
   const title = PAGE_TITLES[pathname] ?? "Roni";
-  const isTaskView = ["/app/inbox", "/app/today", "/app/upcoming", "/app/anytime", "/app/someday"].includes(pathname);
+  const isTaskView = ["/inbox", "/today", "/upcoming", "/anytime", "/someday"].includes(pathname);
 
   return (
     <header className="h-14 flex items-center justify-between px-6 border-b border-white/5 shrink-0">

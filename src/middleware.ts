@@ -1,7 +1,7 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
-export async function proxy(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request });
 
   const supabase = createServerClient(
@@ -31,16 +31,29 @@ export async function proxy(request: NextRequest) {
 
   const { pathname } = request.nextUrl;
 
-  const isAppRoute = pathname.startsWith("/app");
+  const protectedPaths = [
+    "/inbox",
+    "/today",
+    "/upcoming",
+    "/anytime",
+    "/someday",
+    "/calendar",
+    "/focus",
+    "/insights",
+    "/settings",
+    "/projects",
+  ];
+
+  const isProtected = protectedPaths.some((p) => pathname.startsWith(p));
   const isAuthRoute =
     pathname.startsWith("/login") || pathname.startsWith("/register");
 
-  if (isAppRoute && !user) {
+  if (isProtected && !user) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
   if (isAuthRoute && user) {
-    return NextResponse.redirect(new URL("/app/inbox", request.url));
+    return NextResponse.redirect(new URL("/inbox", request.url));
   }
 
   return supabaseResponse;

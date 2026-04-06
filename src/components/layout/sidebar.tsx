@@ -23,17 +23,17 @@ import { useUIStore } from "@/stores/ui-store";
 import { signOut } from "@/lib/actions/auth";
 
 const NAV_ITEMS = [
-  { href: "/app/inbox", label: "Inbox", icon: Inbox },
-  { href: "/app/today", label: "Today", icon: Sun },
-  { href: "/app/upcoming", label: "Upcoming", icon: Calendar },
-  { href: "/app/anytime", label: "Anytime", icon: Archive },
-  { href: "/app/someday", label: "Someday", icon: Clock },
+  { href: "/inbox", label: "Inbox", icon: Inbox },
+  { href: "/today", label: "Today", icon: Sun },
+  { href: "/upcoming", label: "Upcoming", icon: Calendar },
+  { href: "/anytime", label: "Anytime", icon: Archive },
+  { href: "/someday", label: "Someday", icon: Clock },
 ];
 
 const TOOLS = [
-  { href: "/app/calendar", label: "Calendar", icon: Calendar },
-  { href: "/app/focus", label: "Focus", icon: Zap },
-  { href: "/app/insights", label: "Insights", icon: BarChart2 },
+  { href: "/calendar", label: "Calendar", icon: Calendar },
+  { href: "/focus", label: "Focus", icon: Zap },
+  { href: "/insights", label: "Insights", icon: BarChart2 },
 ];
 
 export function Sidebar() {
@@ -100,9 +100,9 @@ export function Sidebar() {
           {projects?.map((project) => (
             <NavItem
               key={project.id}
-              href={`/app/projects/${project.id}`}
+              href={`/projects/${project.id}`}
               label={project.name}
-              active={pathname === `/app/projects/${project.id}`}
+              active={pathname === `/projects/${project.id}`}
               dotColor={project.color}
             />
           ))}
@@ -120,10 +120,10 @@ export function Sidebar() {
 
       <div className="px-2 pb-4 border-t border-white/5 pt-3 space-y-0.5">
         <NavItem
-          href="/app/settings"
+          href="/settings"
           label="Settings"
           icon={Settings}
-          active={pathname === "/app/settings"}
+          active={pathname === "/settings"}
         />
         <form action={signOut}>
           <button

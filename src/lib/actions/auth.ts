@@ -24,7 +24,7 @@ export async function signUp(formData: FormData) {
   }
 
   if (data.session) {
-    redirect("/app/inbox");
+    redirect("/inbox");
   }
 
   const { error: signInError } = await supabase.auth.signInWithPassword({
@@ -39,7 +39,7 @@ export async function signUp(formData: FormData) {
     };
   }
 
-  redirect("/app/inbox");
+  redirect("/inbox");
 }
 
 export async function signIn(formData: FormData) {
@@ -54,7 +54,7 @@ export async function signIn(formData: FormData) {
     return { error: error.message };
   }
 
-  redirect("/app/inbox");
+  redirect("/inbox");
 }
 
 export async function signOut() {
