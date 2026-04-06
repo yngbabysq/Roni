@@ -10,10 +10,12 @@ import type { Enums } from "@/types/database";
 
 interface TaskListProps {
   folder: Enums<"task_folder">;
+  projectId?: string;
 }
 
-export function TaskList({ folder }: TaskListProps) {
-  const { data: tasks, isLoading } = useTasks(folder);
+export function TaskList({ folder, projectId }: TaskListProps) {
+  const { data: allTasks, isLoading } = useTasks(folder);
+  const tasks = projectId ? allTasks?.filter((t) => t.project_id === projectId) : allTasks;
   const { mutate: createTask } = useCreateTask();
   const [isAddingTask, setIsAddingTask] = useState(false);
   const [newTaskTitle, setNewTaskTitle] = useState("");

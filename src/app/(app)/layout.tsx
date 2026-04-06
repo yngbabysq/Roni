@@ -2,6 +2,9 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { Sidebar } from "@/components/layout/sidebar";
 import { TopBar } from "@/components/layout/top-bar";
+import { TaskDetail } from "@/components/tasks/task-detail";
+import { CommandPalette } from "@/components/ui/command-palette";
+import { CreateProjectModal } from "@/components/ui/create-project-modal";
 
 export default async function AppLayout({
   children,
@@ -26,6 +29,9 @@ export default async function AppLayout({
           {children}
         </main>
       </div>
+      <TaskDetail />
+      <CommandPalette />
+      <CreateProjectModal />
     </div>
   );
 }

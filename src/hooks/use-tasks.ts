@@ -6,7 +6,7 @@ import type { Enums, TablesInsert, TablesUpdate } from "@/types/database";
 
 export function useTasks(folder?: Enums<"task_folder">) {
   return useQuery({
-    queryKey: ["tasks", folder],
+    queryKey: folder ? ["tasks", folder] : ["tasks"],
     queryFn: () => getTasks(folder).then(r => r.data ?? []),
   });
 }
